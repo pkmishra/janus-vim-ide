@@ -1,5 +1,5 @@
 echo   "This script is going to install custom plugin in $HOME/.janus directory"
-echo   "If $HOME.janus doesn't exist it will create one.
+echo   "If $HOME.janus doesn't exist it will create one."
 
 if [ ! -d $HOME/.janus ];
            then
