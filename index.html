@@ -92,7 +92,15 @@ popular plug-ins and the most common mappings.</p>
 <p>The distribution is completely customisable using a <code>~/.vimrc.before</code>
 and <code>~/.vimrc.after</code> Vim RC files.</p>
 
-<h2>Customization</h2>
+<h2>NOTE: if you are geeting error that color Zenburn not found</h2>
+
+<p>-Just go to colors directory create a folder called Zenburn and </p>
+
+<ul>
+<li>use following command</li>
+<li>wget -O Zenburn.vim <a href="http://www.vim.org/scripts/download_script.php?src_id=6149">http://www.vim.org/scripts/download_script.php?src_id=6149</a>
+</li>
+</ul><h2>Customization</h2>
 
 <p>You can use <code>~/.gvimrc.before</code> and <code>~/.vimrc.before</code> for settings Janus itself uses,
 such as the <strong>leader</strong> setting. You may also use <code>~/.gvimrc.after</code> and
@@ -102,33 +110,24 @@ Janus.</p>
 
 <p>For example, to override the default color schemes:</p>
 
-<div class="highlight">
-<pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'color desert'</span>  &gt;&gt; ~/.vimrc.after
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'color desert'</span>  &gt;&gt; ~/.vimrc.after
 <span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'color molokai'</span> &gt;&gt; ~/.gvimrc.after
-</pre>
-</div>
-
+</pre></div>
 
 <p>If you want to do additional customization or add more Vim plugins,
 create a <code>~/.janus</code> directory and add your plugins there, either with a
 <code>git clone</code> or by adding submodules to your own git repository there.
 This directory is treated like a normal pathogen directory. For example:</p>
 
-<div class="highlight">
-<pre><span class="nv">$ </span><span class="nb">cd</span> ~/.janus
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> ~/.janus
 <span class="nv">$ </span>git clone https://github.com/vim-scripts/Rename2.git rename2
-</pre>
-</div>
-
+</pre></div>
 
 <p>Or, if you have a git repository in <code>~/.janus</code>, you can use a submodule:</p>
 
-<div class="highlight">
-<pre><span class="nv">$ </span><span class="nb">cd</span> ~/.janus
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> ~/.janus
 <span class="nv">$ </span>git submodule add https://github.com/vim-scripts/Rename2.git rename2
-</pre>
-</div>
-
+</pre></div>
 
 <p>If you would like to disable an included plug-in, you can do that with
 the <code>janus#disable_plugin()</code> function from inside your
@@ -136,11 +135,8 @@ the <code>janus#disable_plugin()</code> function from inside your
 without the group. For example, if you would like to disable the
 NERDCommenter plug-in, you can do that with the command:</p>
 
-<div class="highlight">
-<pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"call janus#disable_plugin('nerdcommenter')"</span> &gt;&gt; ~/.vimrc.before
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"call janus#disable_plugin('nerdcommenter')"</span> &gt;&gt; ~/.vimrc.before
+</pre></div>
 
 <p><strong>WARNING</strong>: We've noticed over and over, that people fork Janus just to
 customize it. This is bad practice for several reasons and you should
