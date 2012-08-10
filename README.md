@@ -51,6 +51,10 @@ popular plug-ins and the most common mappings.
 The distribution is completely customisable using a `~/.vimrc.before`
 and `~/.vimrc.after` Vim RC files.
 
+##NOTE: if you are geeting error that color Zenburn not found 
+-Just go to colors directory create a folder called Zenburn and 
+- use following command
+- wget -O Zenburn.vim http://www.vim.org/scripts/download_script.php?src_id=6149
 
 ## Customization
 
