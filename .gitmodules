@@ -6,7 +6,7 @@
 # Colors
 [submodule "janus/vim/colors/sampler-pack"]
 	path = janus/vim/colors/sampler-pack
-	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
 [submodule "janus/vim/colors/solarized"]
 	path = janus/vim/colors/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -84,6 +84,15 @@
 [submodule "janus/vim/langs/arduino"]
 	path = janus/vim/langs/arduino
 	url = https://github.com/vim-scripts/Arduino-syntax-file.git
+[submodule "janus/vim/langs/clojure"]
+	path = janus/vim/langs/clojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "janus/vim/langs/less"]
+	path = janus/vim/langs/less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "janus/vim/langs/haskell"]
+	path = janus/vim/langs/haskell
+	url = https://github.com/wlangstroth/vim-haskell.git
 
 # Tools
 [submodule "janus/vim/tools/unimpaired"]
@@ -134,9 +143,6 @@
 [submodule "janus/vim/tools/nerdtree"]
 	path = janus/vim/tools/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "janus/vim/tools/pep8"]
-	path = janus/vim/tools/pep8
-	url = https://github.com/jbking/vim-pep8.git
 [submodule "janus/vim/tools/indent-object"]
 	path = janus/vim/tools/indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
@@ -167,12 +173,18 @@
 [submodule "janus/vim/tools/kwbd"]
 	path = janus/vim/tools/kwbd
 	url = https://github.com/rgarver/Kwbd.vim.git
-[submodule "janus/vim/tools/rename2"]
-	path = janus/vim/tools/rename2
-	url = https://github.com/vim-scripts/Rename2.git
 [submodule "janus/vim/tools/ctrlp"]
 	path = janus/vim/tools/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "janus/vim/tools/vroom"]
 	path = janus/vim/tools/vroom
 	url = https://github.com/skalnik/vim-vroom.git
+[submodule "janus/vim/langs/minitest"]
+	path = janus/vim/langs/minitest
+	url = https://github.com/sunaku/vim-ruby-minitest.git
+[submodule "janus/vim/tools/eunuch"]
+	path = janus/vim/tools/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "janus/vim/tools/repeat"]
+	path = janus/vim/tools/repeat
+	url = https://github.com/tpope/vim-repeat.git

@@ -64,8 +64,11 @@ submodules:
         - rails
         - syntax
     handlebars:
+    haskell:
     javascript:
+    less:
     markdown:
+    minitest:
     nodejs:
     puppet:
     rails:
@@ -74,6 +77,7 @@ submodules:
     scala:
     scss:
     textile:
+    clojure:
 
 
   # Tools
@@ -93,11 +97,12 @@ submodules:
     gundo:
     indent-object:
     kwbd:
+    eunuch:
     matchit:
     narrowregion:
     nerdcommenter:
     nerdtree:
-    pep8:
+    repeat:
     snipmate:
       dependencies:
         - vim-addon-mw-utils
@@ -114,5 +119,4 @@ submodules:
     vim-addon-mw-utils:
     vimwiki:
     zoomwin:
-    rename2:
     vroom:

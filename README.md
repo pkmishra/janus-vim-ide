@@ -55,6 +55,62 @@ and `~/.vimrc.after` Vim RC files.
 -Just go to colors directory create a folder called Zenburn and 
 - use following command
 - wget -O Zenburn.vim http://www.vim.org/scripts/download_script.php?src_id=6149
+=======
+## Updating to the latest version
+
+(Note: If you haven't upgraded since Jan 10, 2012, see instructions
+[below](https://github.com/carlhuda/janus#alternative-upgrade-steps).)
+
+To update to the latest version of the distribution, just run `rake`
+inside your `~/.vim` directory.
+
+NOTE: If you ever have an error updating Janus relating to a
+missing commit in a submodule, please try running `rake` again before
+submitting an issue.
+
+## Mailing list
+
+The mailing list is hosted at [Google
+Groups](http://groups.google.com/group/janus-vimius), please join it for
+discussion and announcements.
+
+## Pre-requisites
+
+The distribution is designed to work with Vim >= 7.3.
+
+The distribution also requires `ack`, `ctags`, `git`, `ruby` and `rake`.
+For the most comfortable experience, use the GUI version of Vim. Linux
+users should install `gvim`, OSX users should install
+[MacVim](http://code.google.com/p/macvim/). The recommended way of
+installing MacVim is using
+[Homebrew](http://mxcl.github.com/homebrew/), but before installing
+MacVim you need to use system-wide Python (If you are using python that
+is):
+
+* If you're using **pythonbrew**: do `pythonbrew off`
+
+```bash
+$ brew install macvim
+```
+
+If you don't use Homebrew, you can still download MacVim
+[here](https://github.com/b4winckler/macvim/downloads).
+
+Take a look at the [Pre-requisites wiki
+page](https://github.com/carlhuda/janus/wiki/Pre-requisites) for more
+information.
+
+
+## Installation
+
+To install Janus, please use our [automatic
+installer](https://github.com/carlhuda/janus/blob/master/bootstrap.sh)
+, which backs up any Vim files found in your home folder and installs
+Janus.
+
+```bash
+$ curl -Lo- https://bit.ly/janus-bootstrap | bash
+```
 
 ## Customization
 
@@ -140,11 +196,14 @@ Here're some tips in case you've never used VIM before:
 
 ## Modes
 
-* VIM has two modes:
+* VIM has three modes:
   * insert mode- stuff you type is added to the buffer
   * normal mode- keys you hit are interpreted as commands
+  * visual mode- allows you to select blocks of text
 * To enter insert mode, hit `i`
 * To exit insert mode, hit `<ESC>`
+* To enter visual mode, hit `v`
+* To exit visual mode, hit `<ESC>`
 
 ## Useful commands
 
@@ -183,9 +242,8 @@ Janus ships with a number of basic customizations for vim:
   a vertical split)
 * `<leader>et` expands to `:tabe (directory of current file)/` (open in
   a new tab)
-* `:w!!` expands to `%!sudo tee > /dev/null %`. Write to the current file
-  using sudo (if you forgot to run it with sudo), it will prompt for
-sudo password when writing
+* Write a privileged file with `:SudoW` or `:SudoWrite`, it will prompt
+  for sudo password when writing
 * `<F4>` toggles paste mode
 * `<leader>fef` formats the entire file
 * `<leader>u` converts the entire word to uppercace
@@ -249,6 +307,20 @@ NERDTree:
 * In general, assume that there is a single NERDTree buffer on the left
   and one or more editing buffers on the right
 
+## [Unimpaired](https://github.com/tpope/vim-unimpaired)
+
+This plugin provides a lot of useful mappings, here's a brief example of
+what it does provide:
+
+* `[b` to go to the previous buffer
+* `]b` to go to the next buffer
+* `[n` to go to the previous SCM conflict marker
+* `]n` to go to the next SCM conflict marker
+
+Please check [`:help
+unimpaired`](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
+for a complete list
+
 ## [SuperTab](http://github.com/ervandew/supertab)
 
 In insert mode, start typing something and hit `<TAB>` to tab-complete
@@ -270,7 +342,7 @@ Tagbar is a vim plugin for browsing the tags of source code files.
 ## [EasyMotion](https://github.com/Lokaltog/vim-easymotion)
 
 EasyMotion provides a much simpler way to use some motions in vim. It
-takes the <number> out of <number>w or <number>f{char} by highlighting
+takes the `<number>` out of `<number>w` or `<number>f{char}` by highlighting
 all possible choices and allowing you to press one key to jump directly
 to the target.
 
@@ -381,7 +453,31 @@ Rakefile then please head over to the [rakefile
 branch](https://github.com/carlhuda/janus/tree/rakefile) but please note
 that the rakefile branch will not be maintained.
 
-## License
+# Alternative Upgrade Steps
+
+## Upgrading from before January 1st, 2012
+
+If you were using Janus before January 2012, note that Janus has gone
+through a rewrite to make it more stable and customizable. Most notably,
+you can now disable plugins using `janus#disable_plugin` and customize
+Janus using `~/.vimrc.before` and `~/.vimrc.after`. See the rest of this
+`README` and the [Customization wiki page](https://github.com/carlhuda/janus/wiki/Customization).
+
+## Upgrading from January 1st, 2012 through January 10th
+
+Please run `rake` twice before running macvim; make sure `command-t` is
+gone.
+
+To upgrade to the latest version:
+
+1. remove `~/.vim`, `~/.vimrc` and `~/.gvimrc`.
+2. move customizations from `~/.vimrc.local` to `~/.vimrc.before` and
+   `~/.vimrc.after`.
+3. Do the same with `/.gvimrc.local`.
+4. Run the installer: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
+
+
+# License
 
 ### This code is free to use under the terms of the MIT license.
 
